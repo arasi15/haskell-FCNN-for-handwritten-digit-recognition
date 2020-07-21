@@ -29,10 +29,8 @@ MNIST: 28x28
 
 ## Loss Function
 
-$Softmax=\frac{e^{x_i}}{\sum^{9}_{0}{e^j}}$  
-
-
-$CrossEntropy=\sum^{9}_{0}-label_{i}\times ln(softmax_{i})$
+1. $Softmax=\frac{e^{x_i}}{\sum^{9}_{0}{e^j}}$  
+2. $CrossEntropy=\sum^{9}_{0}-label_{i}\times ln(softmax_{i})$
 
 ## BackPropagation
 
