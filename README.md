@@ -1,7 +1,8 @@
 # haskell-FCNN-handwritten-Recognition
 
 This is a course project of haskell.  
-A fully connected neural network is realized for handwritten recognition trained on MNIST dataset.  
+A fully connected neural network is trained on MNIST dataset for handwritten digit recognition.  
+HandWrittenRecog.hs describes training procedure including forward propagation and backward propagation.
 
 ## Dataset  
 
