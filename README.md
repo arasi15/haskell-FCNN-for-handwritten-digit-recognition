@@ -35,7 +35,7 @@ MNIST: 28x28
 ## BackPropagation
 
 1. $\frac{dLoss}{drelu\_feat3_{i}}=\frac{-d\sum{y_i\times ln(\frac{e^{x_{i}}}{\sum{e^{x_{j}}}})}}{dx_k}=\sum{y_i}\frac{dln(\sum{{e^{x_{j}}}})-dln(e^{x_i})}{dx_k}=\sum{y_i}\times(\frac{e^{x_k}}{\sum{e^{x_j}}}-\frac{dx_i}{dx_k})=\sum{y_i}\times(softmax_k-\frac{dx_i}{dx_k})=softmax_k-label_k$
-2.$\frac{drelu\_{f_k}}{df_k}=\begin{cases}0&\text{f<0}\\1&\text{f>0}\\\end{cases}$
+2.$\frac{drelu\_{f_k}}{df_k}=\begin{cases}0&\text{f<0}\\ 1&\text{f>0}\\\end{cases}$
 3. $\frac {dLoss} {dfeat3}=relu^′ (softmax)-label$
 4. $\frac{dLoss}{dW3}=\frac{dLoss}{dfeat3}×\frac{dfeat3}{dW3}=[relu\_feat2]^T×[relu^′ (softmax)-label]$
 5. $\frac{dLoss}{dW2}=\frac{dLoss}{dfeat3}×\frac{dfeat3}{dfeat2}×\frac{dfeat2}{dW2}=[relu_feat1]^T×relu^′ ([relu^′ (softmax)-label]×[W3]^T)$
